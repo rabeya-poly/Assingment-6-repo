@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en"data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-6</title>
+    <!--CND-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--font cnd-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+   
+
+</head>
+<body>
+    <header class="mx-auto mt-3">
+        <nav><div class="navbar bg-base-100">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16" />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow ">
+                <li><a>Home</a></li>
+                <li><a>Shop</a></li>
+                <li><a>Contact</a></li>
+                </ul>
+              </div>
+              <div class="flex gap-2">
+                <img src="images/logo.webp" alt="">
+                <h1 class="font-bold text-3xl text-black">Peddy</h1></div>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1 text-sm font-semibold">
+                <li><a>Home</a></li>
+                <li><a>Shop</a></li>
+                <li><a>Contact</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <a class="border rounded-full border-black px-2 py-1"><i class="fa-regular fa-user"></i></a>
+            </div>
+          </div></nav>
+          <div class="items-center text-center mt-3 space-y-3">
+            <h2 class="text-2xl  text-gray-500 font-semibold">Bringing Families Together 💝</h2>
+            <h1 class="text-5xl font-bold">Your Path to Adoption Starts Here </h1>
+            <h3>Our platform connects potential adopters with people who need to home their pets.This makes it easier for people<br> to adopt the right pet whilst maximizing the change of pets finding their forever home</h3>
+            <a href="#adopt-container"><button class="btn bg-[#0E7A81] text-white hover:bg-[#0E7A81]">View More</button></a>
+          </div>
+          <div class="flex justify-center"><img  src="images/pet.webp" alt=""></div>
+    </header>
+    <main class="mx-auto p-10">
+        <section   >
+            <div class="text-center space-y-3 mt-6">
+                <h1 id="adopt-container" class="font-bold text-3xl">Adopt Your Best Friend</h1>
+                <p>We offer a non-judgmental service and give them full control of the process.We're also helping to reduce the number of animals going into shelters.This frees up space <br>and resource for the pets who have been abandoned,need immediate help or specialist care.</p>
+            </div>
+            <!--pet category button-->
+            <div id="pet-categories" class="flex items-center justify-center lg:justify-between gap-4 my-4">
+
+            </div>
+            <!--pet category button End-->
+            
+            <div class="flex justify-between">
+                <div><h1 class="font-semibold text-lg">Best Deal For You</h1></div>
+                <div><button onclick="sort()" class="btn">Sort by Price</button></div>
+            </div>
+            <!--card-image section START-->
+            <div class="my-12">
+              <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 px-2">
+                <!--card-->
+              <div class="lg:col-span-3 ">
+                <!--spinner-->
+                <div id="loader-hidden" class="hidden">
+                  <div class="relative flex justify-center items-center">
+                    <div class="absolute animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-teal-700"></div>
+                    
+                    <img src="images/logo.webp"  class="rounded-full ">
+                </div>
+                </div>
+                <!--Cards-->
+                <div id="all-pets" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <!--dynamic pet card here-->
+                </div>
+              </div>
+              <!--Image-->
+              <div id="liked-pets" class="rounded-xl h-fit border grid grid-cols-2 gap-2 p-2 w-full">
+                 </div>
+              </div>
+            </div>
+             <!--card-image section END-->
+        </section>
+        <!---------------------------------------------------------------------------------------------->
+        <section id="videos" class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 py-10">
+
+        </section>
+    </main>
+
+
+    <footer>
+        <footer class="footer bg-black text-white p-10 justify-around">
+            <aside>
+              <nav>
+              <div class="flex gap-2 mb-2">
+                <img src="images/logo.webp" alt="">
+                <h1 class="font-bold text-3xl text-white">Peddy</h1></div>
+            </div>
+              <p>Location:av.Washington 185/NY CA 54003</p>
+              <p>Phone:+31 85 964 43 34</p>
+              <p>Email:info@youdomain.com</p>
+              <p>Openings hours: 9.00AM-5.00PM</p></nav>
+           
+            <nav>
+              <div class="grid grid-flow-col gap-4">
+                <a><img class="w-10" src="images/facebook.png" alt=""></a>
+                <a><img class="w-10 " src="images/twitter.png" alt=""></a>
+                <a><img class="w-10" src="images/youtube.png" alt=""></a>
+                <a><img class="w-10" src="images/instagram.png" alt=""></a>
+              </div>
+            </nav>
+        </aside>
+        <nav>
+            <h6 class=" text-white text-xl">Useful Links</h6>
+            <a class="link link-hover">Home</a>
+            <a class="link link-hover">About Us</a>
+            <a class="link link-hover">Animals</a>
+            <a class="link link-hover">Foundation</a>
+            <a class="link link-hover">Contact</a>
+          </nav>
+          <form>
+            <h6 class=" text-white text-xl">Drop a Message</h6>
+            <fieldset class="form-control w-80">
+              <label class="label">
+                <span class="label-text text-white">Enter your email </span>
+              </label>
+              <div class="join flex flex-col gap-3 ">
+                <input
+                  type="text"
+                  placeholder="username@site.com"
+                  class="input input-bordered "/>
+                <button class="btn bg-[#0E7A81] text-white">Subscribe</button>
+              </div>
+            </fieldset>
+          </form>
+          </footer>
+    </footer>
+<!--detail button-->
+<!-- Open the modal using ID.showModal() method -->
+
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+  <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn w-full">Detail Modal</button>
+      </form>
+    </div>
+</dialog>
+<!--detail button-->
+
+<!--Adopt button-->
+<!-- You can open the modal using ID.showModal() method -->
+
+<dialog id="my_modal_4" class="modal">
+  <div class="modal-box w-11/12 max-w-xl">
+    <h3 class="text-xl font-bold text-center">Congratulations!</h3>
+    <p class="py-4 text-center text-lg">Adoption will be done in</p>
+    <p id="countdown-container" class="text-center text-5xl font-bold">3</p>
+    <div class="modal-action">
+      </div>
+  </div>
+</dialog>
+<!--Adopt button-->
+
+    <!-- script -->
+    <script src="./JS/utility.js"></script>                                      
+     <script src="./JS/script.js"></script>
+     
+</body>
+</html>
